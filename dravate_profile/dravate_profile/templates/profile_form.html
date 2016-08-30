@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<h3>User Profile Details</h3>
+
+
+
+<div class="panel panel-default">
+
+<form method="post">
+{% csrf_token %}
+<table class="table">
+    <tr>
+        <td> <b>First Name:  </b> </td>
+        <td> {{ user_form.first_name }} </td>
+    </tr>
+    <tr>
+        <td> <b>Last Name: </b> </td>
+        <td> {{ user_form.last_name }} </td>
+    </tr>
+    <tr>
+        <td> <b>Phone Number: </b> </td>
+        <td> {{ user_profile.phone }} </td>
+    </tr>
+    <tr>
+        <td> <b>Address: </b> </td>
+        <td> {{ user_profile.address }} </td>
+    </tr>
+    <tr>
+    <tr>
+        <td> <b>Email: </b> </td>
+        <td> {{ user_form.email }} </td>
+    </tr>
+    
+</table> 
+<table class="table">
+   <tr>
+     <td>
+        <div class="form-group">
+           <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-8">
+                 <button id="submit" name="submit" class="btn btn-primary" value="1">Save Profile</button>
+                 <button id="cancel" name="cancel" class="btn btn-default" value="1">Cancel</button>
+              </div>
+        </div>
+     </td>
+   </tr>
+</table>
+</form>
+
+</div>
+
+{% endblock %}
