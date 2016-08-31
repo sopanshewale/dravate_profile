@@ -1,2 +1,0 @@
-# Dravate Profile - Django Project
-
