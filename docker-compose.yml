@@ -1,0 +1,8 @@
+version: '2'
+services:
+ dravate_profile:  
+  build: dravate_profile 
+  container_name: dravate_profile 
+  ports:
+    - "5000:5000"
+
