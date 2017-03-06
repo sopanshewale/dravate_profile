@@ -4,5 +4,5 @@ services:
   build: dravate_profile 
   container_name: dravate_profile 
   ports:
-    - "5000:5000"
+    - "9191:9191"
 

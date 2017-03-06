@@ -5,8 +5,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.forms import PasswordChangeForm
-from forms import UserForm, ProfileForm
-from models import Userprofile
+from .forms import UserForm, ProfileForm
+from .models import Userprofile
 from django.contrib.auth.models import User
 
 @login_required(login_url='/login')
@@ -47,7 +47,7 @@ def profile_form(request):
     else:
 
         user_profile = _get_profile(request)
-        print user_profile
+        print (user_profile)
         user_form = \
             UserForm(initial={'first_name': user_profile['first_name'],
                      'last_name': user_profile['last_name'], 'email':user_profile['email']})
