@@ -22,39 +22,32 @@ Running Docker Image
 
 After cloning code into your working directory, you just need to run following command: 
 
-```
-$ docker-compose up -d
+    $ docker-compose up -d
 
-```
+
 
 This will start (This takes time for the first time - it's based on django image from Docker Repository) **dravate_profile**
 image. 
 
 You can connect to iamge via: 
 
-```
-$ docker exec -it dravate_profile  bash
+    $ docker exec -it dravate_profile  bash
 
-```
 
 To create a  Super-User - you need to execute following commands afrer connecting to docker image via command line. 
 
-```
-# python manage.py createsuperuser 
+
+#python manage.py createsuperuser 
 Username (leave blank to use 'root'): demo 
 Email address: demo@example.com
 Password: 
 Password (again): 
 Superuser created successfully.
 
-```
 
 After that - you can visit
 
-```
-http://localhost:9191
-
-```
+    http://localhost:9191
  
 
 TODO
